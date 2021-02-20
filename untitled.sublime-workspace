@@ -1,0 +1,567 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"sorted",
+				"sorted_datasets"
+			],
+			[
+				"sort",
+				"sort_dataset"
+			],
+			[
+				"da",
+				"dataset_to_delete"
+			],
+			[
+				"acti",
+				"activation_window"
+			],
+			[
+				"ac",
+				"activation_matrix"
+			],
+			[
+				"activation",
+				"activation_matrix"
+			],
+			[
+				"fin",
+				"find_average"
+			],
+			[
+				"activa",
+				"activation_average"
+			],
+			[
+				"expe",
+				"expected"
+			],
+			[
+				"nucl",
+				"nucleus"
+			],
+			[
+				"pow",
+				"power_matrix"
+			],
+			[
+				"optim",
+				"optimal_threshold"
+			],
+			[
+				"random",
+				"random_selection"
+			],
+			[
+				"acto",
+				"activation_average"
+			],
+			[
+				"matr",
+				"matrix_str"
+			],
+			[
+				"prepa",
+				"prepared_datasets_str"
+			],
+			[
+				"learn",
+				"learn_datasets"
+			],
+			[
+				"prepare",
+				"prepare_to_understand"
+			],
+			[
+				"de",
+				"dendrites_local"
+			],
+			[
+				"lea",
+				"learned_datasets"
+			],
+			[
+				"current",
+				"current_dataset"
+			],
+			[
+				"dataset",
+				"dataset_name"
+			],
+			[
+				"initializ",
+				"initialize_dendrites"
+			],
+			[
+				"initi",
+				"initialize_dendrites"
+			],
+			[
+				"fi",
+				"first_neuron"
+			],
+			[
+				"expected",
+				"expected_result"
+			],
+			[
+				"lis",
+				"list_avg"
+			],
+			[
+				"active",
+				"active_array"
+			],
+			[
+				"power",
+				"power_matrix_average"
+			],
+			[
+				"find",
+				"find_optimal_threshold"
+			],
+			[
+				"va",
+				"value_matrix"
+			],
+			[
+				"nu",
+				"nucleus"
+			],
+			[
+				"no",
+				"normalize_dendrites"
+			],
+			[
+				"ma",
+				"maximize_dendrites"
+			],
+			[
+				"nucleus",
+				"nucleus_threshold"
+			],
+			[
+				"avera",
+				"average_from_class"
+			],
+			[
+				"power_",
+				"power_matrix_average"
+			],
+			[
+				"po",
+				"power_matrix_average"
+			],
+			[
+				"den",
+				"dendrites_amount"
+			],
+			[
+				"activ",
+				"activation_matrix"
+			],
+			[
+				"dendrites",
+				"Dendrites"
+			],
+			[
+				"file",
+				"file_object"
+			],
+			[
+				"sa",
+				"sandwich_orders"
+			],
+			[
+				"lan",
+				"langauges"
+			],
+			[
+				"c",
+				"color"
+			],
+			[
+				"r",
+				"river"
+			],
+			[
+				"langu",
+				"languages_statistics"
+			],
+			[
+				"fa",
+				"favourite_languages"
+			],
+			[
+				"alie",
+				"alien_0"
+			],
+			[
+				"di",
+				"dimensions"
+			],
+			[
+				"gues",
+				"guests_to_add"
+			],
+			[
+				"absent",
+				"absent_guest"
+			],
+			[
+				"la",
+				"last_owned"
+			],
+			[
+				"bi",
+				"bicycles"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Default/Syntax Tests.sublime-build",
+					""
+				],
+				[
+					"Packages/Default/Syntax Tests.sublime-build",
+					"All Syntaxes"
+				],
+				[
+					"Packages/Default/Syntax Tests.sublime-build",
+					"Performance"
+				],
+				[
+					"Packages/Default/Syntax Tests.sublime-build",
+					"Regex Compatibility"
+				]
+			],
+			[
+				"Packages/Default/Syntax Tests.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"prv",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"Package Control: ins\t",
+				"Package Control: Install Package"
+			],
+			[
+				"hex",
+				"HexViewer: Export Bin"
+			],
+			[
+				"regreplace",
+				"RegReplace: Create New Regular Expression Rule"
+			],
+			[
+				"package control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/antonvisnevski/Downloads/2_КАВ20А_испо_recover.csv",
+		"/Users/antonvisnevski/Desktop/code/neural_network/retrogramm.log",
+		"/Users/antonvisnevski/Desktop/code/pythonlearning/test2.py",
+		"/Users/antonvisnevski/Desktop/code/neural_network/debug.log",
+		"/Users/antonvisnevski/Desktop/code/neural_network/neuron.py",
+		"/Users/antonvisnevski/Desktop/code/neural_network/main.py",
+		"/Users/antonvisnevski/Desktop/code/pythonlearning/tests/name_function.py",
+		"/Users/antonvisnevski/Desktop/code/pythonlearning/tests/names.py",
+		"/Users/antonvisnevski/Desktop/code/pythonlearning/tests/test_name_function.py",
+		"/Users/antonvisnevski/Desktop/code/pythonlearning/exceptions/number_writer.py",
+		"/Users/antonvisnevski/Desktop/code/pythonlearning/exceptions/number_reader.py",
+		"/Users/antonvisnevski/Desktop/code/pythonlearning/exceptions/numbers.json",
+		"/Users/antonvisnevski/Desktop/code/pythonlearning/functions_6.py",
+		"/Users/antonvisnevski/Desktop/code/pythonlearning/functions_4.py",
+		"/Users/antonvisnevski/Desktop/code/pythonlearning/classes_1.py",
+		"/Users/antonvisnevski/Desktop/code/pythonlearning/exceptions/file_reader.py",
+		"/Users/antonvisnevski/Desktop/code/pythonlearning/exceptions/writing_message.py",
+		"/Users/antonvisnevski/Desktop/code/pythonlearning/exceptions/division.py",
+		"/Users/antonvisnevski/Desktop/code/pythonlearning/exceptions/programming.txt",
+		"/Users/antonvisnevski/Desktop/code/pythonlearning/exceptions/pi_digits.txt",
+		"/Users/antonvisnevski/Desktop/code/pythonlearning/functions_5.py",
+		"/Users/antonvisnevski/Desktop/code/pythonlearning/functions_2.py",
+		"/Users/antonvisnevski/Desktop/code/pythonlearning/functions_3.py",
+		"/Users/antonvisnevski/Desktop/code/pythonlearning/while_7-8.py",
+		"/Users/antonvisnevski/Desktop/code/pythonlearning/functions_1.py",
+		"/Users/antonvisnevski/Desktop/code/pythonlearning/while_10.py",
+		"/Users/antonvisnevski/Desktop/code/pythonlearning/while_9.py",
+		"/Users/antonvisnevski/Desktop/code/pythonlearning/while_8.py",
+		"/Users/antonvisnevski/Desktop/code/pythonlearning/while_7-5.py",
+		"/Users/antonvisnevski/Desktop/code/pythonlearning/while_4.py",
+		"/Users/antonvisnevski/Desktop/code/pythonlearning/while_5.py",
+		"/Users/antonvisnevski/Desktop/code/pythonlearning/while_6.py",
+		"/Users/antonvisnevski/Desktop/code/pythonlearning/while_7-4.py",
+		"/Users/antonvisnevski/Desktop/code/pythonlearning/while_3.py",
+		"/Users/antonvisnevski/Desktop/code/pythonlearning/while_2.py",
+		"/Users/antonvisnevski/Desktop/code/pythonlearning/while_1.py",
+		"/Users/antonvisnevski/Desktop/code/pythonlearning/fizzbuzz.py",
+		"/Users/antonvisnevski/Desktop/code/pythonlearning/input_5.py",
+		"/Users/antonvisnevski/Desktop/code/pythonlearning/input_4.py",
+		"/Users/antonvisnevski/Desktop/code/pythonlearning/nesting_6-11.py",
+		"/Users/antonvisnevski/Desktop/code/pythonlearning/input_1.py",
+		"/Users/antonvisnevski/Desktop/code/pythonlearning/input_2.py",
+		"/Users/antonvisnevski/Desktop/code/pythonlearning/input_3.py",
+		"/Users/antonvisnevski/Desktop/code/pythonlearning/guessinggame.py",
+		"/Users/antonvisnevski/Desktop/code/pythonlearning/listsOOP.py",
+		"/Users/antonvisnevski/Library/Application Support/Sublime Text 3/Packages/User/Python-terminal.sublime-build",
+		"/Users/antonvisnevski/Desktop/code/pythonlearning/nesting_6-9.py",
+		"/Users/antonvisnevski/Desktop/code/pythonlearning/nesting_6-8.py",
+		"/Users/antonvisnevski/Desktop/code/pythonlearning/nesting.py",
+		"/Users/antonvisnevski/Desktop/code/pythonlearning/nesting_4.py",
+		"/Users/antonvisnevski/Desktop/code/pythonlearning/nesting_2.py",
+		"/Users/antonvisnevski/Desktop/code/pythonlearning/nesting_3.py",
+		"/Users/antonvisnevski/Desktop/code/pythonlearning/dictionaries_1.py",
+		"/Users/antonvisnevski/Desktop/code/pythonlearning/dictionaries_2.py",
+		"/Users/antonvisnevski/Desktop/code/pythonlearning/dictionaries_3.py",
+		"/Users/antonvisnevski/Desktop/code/pythonlearning/dictionaries_4.py",
+		"/Users/antonvisnevski/Desktop/code/pythonlearning/dictionaries_5.py",
+		"/Users/antonvisnevski/Desktop/code/pythonlearning/dictionaries_6.py",
+		"/Users/antonvisnevski/Desktop/code/pythonlearning/dictionaries6-5.py",
+		"/Users/antonvisnevski/Desktop/code/pythonlearning/dictionaries_7.py",
+		"/Users/antonvisnevski/Library/Application Support/Sublime Text 3/Packages/Python/Python.sublime-build",
+		"/Users/antonvisnevski/Library/Application Support/Sublime Text 3/Packages/User/python3.9.sublime-build",
+		"/Users/antonvisnevski/Desktop/code/pythonlearning/ifstatements8.py",
+		"/Users/antonvisnevski/Desktop/code/pythonlearning/teststuff1.py",
+		"/Users/antonvisnevski/Desktop/code/pythonlearning/ifstatements7.py",
+		"/Users/antonvisnevski/Desktop/code/pythonlearning/ifstatements6.py",
+		"/Users/antonvisnevski/Desktop/code/pythonlearning/ifstatements5.py",
+		"/Users/antonvisnevski/Desktop/code/pythonlearning/ifstatements4.py",
+		"/Users/antonvisnevski/Desktop/code/pythonlearning/ifstatements3.py",
+		"/Users/antonvisnevski/Desktop/code/pythonlearning/ifstatements2.py",
+		"/Users/antonvisnevski/Desktop/code/pythonlearning/ifstatements.py",
+		"/Users/antonvisnevski/Desktop/code/pythonlearning/tuples.py",
+		"/Users/antonvisnevski/Desktop/code/pythonlearning/lists_part2.py",
+		"/Users/antonvisnevski/Desktop/code/pythonlearning/lists_part.py",
+		"/Users/antonvisnevski/Desktop/code/pythonlearning/lists4.py",
+		"/Users/antonvisnevski/Desktop/code/pythonlearning/workingwithlists.py",
+		"/Users/antonvisnevski/Desktop/code/pythonlearning/range.py",
+		"/Users/antonvisnevski/Desktop/code/pythonlearning/lists3-4-5-6.py",
+		"/Users/antonvisnevski/Desktop/code/pythonlearning/numbers.py",
+		"/Users/antonvisnevski/Desktop/code/pythonlearning/hello_world.py",
+		"/Users/antonvisnevski/Desktop/code/pythonlearning/name.py",
+		"/Users/antonvisnevski/Desktop/code/pythonlearning/apostrophe.py",
+		"/Users/antonvisnevski/Desktop/code/pythonlearning/lists.py",
+		"/Users/antonvisnevski/Desktop/code/pythonlearning/lists2.py",
+		"/Users/antonvisnevski/Desktop/code/method1rehexed.bat",
+		"/Users/antonvisnevski/Desktop/code/FirstMethod.hxv",
+		"/Users/antonvisnevski/Desktop/code/handmadesteam.bat",
+		"/Users/antonvisnevski/Desktop/code/ssfn_GFNTools (2).bat",
+		"/Users/antonvisnevski/Desktop/code/ssfn_GFNTools",
+		"/Users/antonvisnevski/Desktop/code/obfuscator.bat",
+		"/Users/antonvisnevski/Desktop/code/presed.bat",
+		"/Users/antonvisnevski/Desktop/code/postprocessed.bat",
+		"/Users/antonvisnevski/Desktop/code/ssfn_GFNToolsv2",
+		"/Users/antonvisnevski/Desktop/code/untitled.hxv",
+		"/Users/antonvisnevski/Desktop/code/ssfn_GFNTools.txt",
+		"/Users/antonvisnevski/Desktop/code/asdasd",
+		"/Users/antonvisnevski/Desktop/code/input.txt",
+		"/Users/antonvisnevski/Desktop/code/process.bat",
+		"/Users/antonvisnevski/Downloads/ssfn_CloudForce.bat",
+		"/Users/antonvisnevski/Downloads/ssfn_GFNTools (1).bat",
+		"/Users/antonvisnevski/Downloads/batch_deobfuscator-master/ssfn_CloudForce.bat",
+		"/Users/antonvisnevski/Downloads/batch_deobfuscator-master/batch_interpreter.py",
+		"/Users/antonvisnevski/Downloads/ssfn_GFNTools (2).bat"
+	],
+	"find":
+	{
+		"height": 24.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 24.0
+	},
+	"input":
+	{
+		"height": 36.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 137.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.hex_viewer_inspector":
+	{
+		"height": 108.0
+	},
+	"output.mdpopups":
+	{
+		"height": 0.0
+	},
+	"output.reg_replace":
+	{
+		"height": 442.0
+	},
+	"pinned_build_system": "Packages/Python/Python.sublime-build",
+	"project": "untitled.sublime-project",
+	"replace":
+	{
+		"height": 44.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 173.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
