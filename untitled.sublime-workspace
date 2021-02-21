@@ -4,6 +4,38 @@
 		"selected_items":
 		[
 			[
+				"room_",
+				"room_objects"
+			],
+			[
+				"room",
+				"room_objects_list"
+			],
+			[
+				"room_obje",
+				"room_objects_list"
+			],
+			[
+				"xy",
+				"xy_coords"
+			],
+			[
+				"obj",
+				"object_name"
+			],
+			[
+				"z",
+				"z_start"
+			],
+			[
+				"y",
+				"y_start"
+			],
+			[
+				"objects_",
+				"objects_refferences"
+			],
+			[
 				"sorted",
 				"sorted_datasets"
 			],
@@ -223,6 +255,42 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "main.py",
+			"settings":
+			{
+				"buffer_size": 742,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "settings.py",
+			"settings":
+			{
+				"buffer_size": 205,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "functions.py",
+			"settings":
+			{
+				"buffer_size": 794,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "blueprint.py",
+			"settings":
+			{
+				"buffer_size": 4033,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -324,6 +392,9 @@
 	},
 	"file_history":
 	[
+		"/Users/antonvisnevski/Desktop/code/alien_invaders/alien_invaders.sublime-workspace",
+		"/Users/antonvisnevski/Desktop/code/autocad_automatization/sample_data.csv",
+		"/Users/antonvisnevski/Desktop/code/autocad_automatization/sample_data2.csv",
 		"/Users/antonvisnevski/Downloads/2_КАВ20А_испо_recover.csv",
 		"/Users/antonvisnevski/Desktop/code/neural_network/retrogramm.log",
 		"/Users/antonvisnevski/Desktop/code/pythonlearning/test2.py",
@@ -461,8 +532,127 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "main.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 742,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								377,
+								377
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 1,
+					"file": "settings.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 205,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								205,
+								205
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "functions.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 794,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								666,
+								550
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "blueprint.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4033,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2672,
+								2672
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1041.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -483,11 +673,18 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.5,
 			1.0
 		],
 		"rows":
@@ -499,7 +696,7 @@
 	"menu_visible": true,
 	"output.exec":
 	{
-		"height": 137.0
+		"height": 108.0
 	},
 	"output.find_results":
 	{
@@ -563,5 +760,6 @@
 	"status_bar_visible": true,
 	"template_settings":
 	{
+		"max_columns": 2
 	}
 }
