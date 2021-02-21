@@ -11,6 +11,13 @@ array = tools.load(settings.temp_file)
 
 bp = Blueprint(array)
 
-bp.calculate_objects()
+if tools.check_file(settings.lines_file) == False:
+	bp.generate_lines()
+	tools.dump(bp.lines, settings.lines_file)
+else:
+	bp.lines = tools.load(settings.lines_file)
 
-print(bp.objects_list)
+bp.count_objects()
+bp.find_refferences()
+
+bp.vizualize_lines()

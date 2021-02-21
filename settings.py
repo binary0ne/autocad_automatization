@@ -4,3 +4,4 @@ class Settings:
 		self.input_file = "sample_data.csv"
 		self.temp_file = "temp.json"
 		self.output_file = "output.json"
+		self.lines_file = "lines.json"

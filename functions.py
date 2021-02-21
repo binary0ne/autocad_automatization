@@ -23,6 +23,11 @@ def parse(input_file, output_file):
 	with open(output_file, 'w') as f_obj:
 		f_obj.write(json.dumps(array, indent=4, sort_keys=False, ensure_ascii=False))
 
+def dump(array, filename):
+	"""Dumps data to json"""
+	with open(filename, 'w') as f_obj:
+		f_obj.write(json.dumps(array, indent=4, sort_keys=False, ensure_ascii=False))	
+
 def load(input_file):
 	"""Loading array of objects"""
 	with open(input_file) as f_obj:
