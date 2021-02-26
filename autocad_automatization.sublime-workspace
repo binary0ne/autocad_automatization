@@ -259,7 +259,7 @@
 			"file": "main.py",
 			"settings":
 			{
-				"buffer_size": 742,
+				"buffer_size": 743,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -283,13 +283,11 @@
 			}
 		},
 		{
-			"contents": "from __future__ import division \nimport matplotlib.pyplot as plt\nimport math\nimport shapely\nfrom shapely.geometry import LineString, Point\n\nclass Blueprint:\n\t\"\"\"Object class for the whole array of elemnts in blueprint\"\"\"\n\tdef __init__(self, objects_array):\n\t\tself.objects = objects_array\n\n\tdef count_objects(self):\n\t\t\"\"\"Calculate objects by name\"\"\"\n\t\tself.objects_list = {}\n\t\tfor value in self.objects.values():\n\t\t\tif value[\"Имя\"] not in self.objects_list:\n\t\t\t\tself.objects_list[value[\"Имя\"]] = 1\n\t\t\telse:\n\t\t\t\tself.objects_list[value[\"Имя\"]] += 1\n\n\tdef find_refferences(self):\n\t\t\"\"\"Get objects refferences by name\"\"\"\n\t\tself.objects_refferences = {}\n\t\tfor key, value in self.objects.items():\n\t\t\tif value[\"Имя\"] not in self.objects_refferences:\n\t\t\t\tself.objects_refferences[value[\"Имя\"]] = [key]\n\t\t\telse:\n\t\t\t\tself.objects_refferences[value[\"Имя\"]].append(key)\n\n\tdef generate_lines(self):\n\t\t\"\"\"Generating range of coordinates for a line\"\"\"\n\t\tself.lines = {}\n\t\tfor key, value in self.objects.items():\n\t\t\tif value[\"Стиль печати\"] == \"АР - Стены\":\t\t\t\t\t\n\t\t\t\tif value[\"Начало Y\"]:\n\t\t\t\t\ty_start = float(value[\"Начало Y\"])\n\t\t\t\tif value[\"Начало Z\"]:\n\t\t\t\t\tz_start = float(value[\"Начало Z\"])\n\t\t\t\tif value[\"Конец Y\"]:\n\t\t\t\t\ty_end = float(value[\"Конец Y\"])\n\t\t\t\tif value[\"Конец Z\"]:\n\t\t\t\t\tz_end = float(value[\"Конец Z\"])\n\t\t\t\tif y_start and z_start and y_end and z_end:\n\t\t\t\t\tself.lines[key] = {}\n\t\t\t\t\tself.lines[key][\"start\"] = [y_start, z_start]\n\t\t\t\t\tself.lines[key][\"end\"] = [y_end, z_end]\n\n\tdef vizualize_lines(self):\n\t\t\"\"\"Builds visual of the blueprint\"\"\"\n\t\tfor key, line in self.lines.items():\n\t\t\tline_x = (line[\"start\"][0], line[\"end\"][0])\n\t\t\tline_y = (line[\"start\"][1], line[\"end\"][1])\n\t\t\t# xmean = sum(i for i in line_x) / float(len(line_x))\n\t\t\t# ymean = sum(i for i in line_y) / float(len(line_y))\n\t\t\tplt.plot(line_x, line_y)\n\t\t\t# plt.annotate(key, xy=(xmean,ymean), xycoords=\"data\")\n\n\t\tplt.show()\n\n\tdef ping_radius(self, xy_coords, lenght, lines):\n\t\t\"\"\"Pings all nearby objects\"\"\"\n\t\tping_lines = []\n\t\tx1 = xy_coords[0]\n\t\ty1 = xy_coords[1]\n\t\tangle = 0\n\t\tincrement = 360 / lines\n\t\twhile angle < 360:\n\t\t\tx2 = x1 + lenght * math.cos(angle)\n\t\t\ty2 = y1 + lenght * math.sin(angle)\n\t\t\tangle += increment\n\t\t\tping_lines.append([x2, y2])\n#\t\t\tplt.plot([x1, x2], [y1, y2])\n\n\t\t# Intersection snippet from \n\t\t# https://stackoverflow.com/\n\t\t# questions/20677795/\n\t\t# how-do-i-compute-the-intersection-point-of-two-lines\n\t\tarray = {}\n\t\tline_n = 0\n\t\tfor x2, y2 in ping_lines:\n\t\t\tarray[line_n] = []\n\t\t\tl1 = LineString([(x1, y1), (x2, y2)])\n\t\t\tfor key, line_b in self.lines.items():\n\t\t\t\tl2 = LineString([(line_b[\"start\"]), (line_b[\"end\"])])\n\t\t\t\tint_pt = l1.intersection(l2)\n\t\t\t\tif len(int_pt.coords) > 0:\n\t\t\t\t\tx = int_pt.x\n\t\t\t\t\ty = int_pt.y\n\t\t\t\t\tr = [x, y]\n\t\t\t\t\tarray[line_n].append([key, r])\n\t\t\tline_n += 1\n\n\t\treturn array\n\n\tdef find_room(self, object_name):\n\t\t\"\"\"Find coordinates of a surrounding room and get its objects\"\"\"\n\t\tarray = self.objects[object_name]\n\t\tx = float(array['Положение Y'])\n\t\ty = float(array['Положение Z'])\n\t\tintersections = self.ping_radius([x,y], float(50000), 360)\n\t\t\n\t\tfound_objects = {}\n\t\tfor key, value in intersections.items():\n\t\t\tobjects = {}\n\t\t\tfor obj_name, ispoint in value:\n\t\t\t\tend_x = ispoint[0]\n\t\t\t\tend_y = ispoint[1]\n\t\t\t\tdist = math.hypot(end_x - x, end_y - y)\n\t\t\t\tobjects[dist] = obj_name\n\t\t\tfound_objects[key] = objects\n\t\t\n\t\troom_objects_list = []\n\n\t\tfor key, distances in found_objects.items():\n\t\t\tdistances_list = []\n\t\t\tfor distance in distances:\n\t\t\t\tdistances_list.append(distance)\n\t\t\tif distances[(min(distances_list))] not in room_objects_list:\n\t\t\t\troom_objects_list.append(distances[(min(distances_list))])\n\n\t\tfor key, line in self.lines.items():\n\t\t\tif key in room_objects_list:\n\t\t\t\tline_x = (line[\"start\"][0], line[\"end\"][0])\n\t\t\t\tline_y = (line[\"start\"][1], line[\"end\"][1])\n\t\t\t\t# xmean = sum(i for i in line_x) / float(len(line_x))\n\t\t\t\t# ymean = sum(i for i in line_y) / float(len(line_y))\n\t\t\t\tplt.plot(line_x, line_y)\n\t\t\t\t# plt.annotate(key, xy=(xmean,ymean), xycoords=\"data\")\n\n\t\tplt.show()\n\n\t\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
 			"file": "blueprint.py",
-			"file_size": 4183,
-			"file_write_time": 132584084115724628,
 			"settings":
 			{
-				"buffer_size": 4046,
+				"buffer_size": 4566,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		}
@@ -544,15 +542,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 742,
+						"buffer_size": 743,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								377,
-								377
+								659,
+								659
 							]
 						],
 						"settings":
@@ -563,7 +561,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -597,7 +595,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
@@ -626,7 +624,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -635,15 +633,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4046,
+						"buffer_size": 4566,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3624,
-								3624
+								3373,
+								3373
 							]
 						],
 						"settings":
@@ -655,7 +653,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -720,7 +718,7 @@
 		"height": 442.0
 	},
 	"pinned_build_system": "Packages/Python/Python.sublime-build",
-	"project": "untitled.sublime-project",
+	"project": "autocad_automatization.sublime-project",
 	"replace":
 	{
 		"height": 44.0
@@ -753,7 +751,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 1,
+	"selected_group": 0,
 	"settings":
 	{
 	},

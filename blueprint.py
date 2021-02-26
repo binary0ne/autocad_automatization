@@ -31,7 +31,7 @@ class Blueprint:
 		"""Generating range of coordinates for a line"""
 		self.lines = {}
 		for key, value in self.objects.items():
-			if value["Стиль печати"] == "АР - Стены":					
+			if value["Имя"] == "МЛиния":					
 				if value["Начало Y"]:
 					y_start = float(value["Начало Y"])
 				if value["Начало Z"]:
@@ -40,6 +40,19 @@ class Blueprint:
 					y_end = float(value["Конец Y"])
 				if value["Конец Z"]:
 					z_end = float(value["Конец Z"])
+				if y_start and z_start and y_end and z_end:
+					self.lines[key] = {}
+					self.lines[key]["start"] = [y_start, z_start]
+					self.lines[key]["end"] = [y_end, z_end]
+			elif value["Стиль печати"] == "АР - Стены" and value["Имя"] == "Линия":
+				if value["Начало Y"]:
+					y_start = float(value["Начало Y"])
+				if value["Начало Z"]:
+					z_start = float(value["Начало Z"])
+				if value["Конец Y"]:
+					y_end = float(value["Конец Y"])
+				if value["Конец Z"]:
+					z_end = float(value["Конец Z"])				
 				if y_start and z_start and y_end and z_end:
 					self.lines[key] = {}
 					self.lines[key]["start"] = [y_start, z_start]
@@ -55,7 +68,7 @@ class Blueprint:
 			plt.plot(line_x, line_y)
 			# plt.annotate(key, xy=(xmean,ymean), xycoords="data")
 
-#		plt.show()
+		plt.show()
 
 	def ping_radius(self, xy_coords, lenght, lines):
 		"""Pings all nearby objects"""
@@ -75,8 +88,6 @@ class Blueprint:
 		# https://stackoverflow.com/
 		# questions/20677795/
 		# how-do-i-compute-the-intersection-point-of-two-lines
-
-
 		array = {}
 		line_n = 0
 		for x2, y2 in ping_lines:
@@ -93,9 +104,6 @@ class Blueprint:
 			line_n += 1
 
 		return array
-					
-
-
 
 	def find_room(self, object_name):
 		"""Find coordinates of a surrounding room and get its objects"""
@@ -120,10 +128,8 @@ class Blueprint:
 			distances_list = []
 			for distance in distances:
 				distances_list.append(distance)
-			if distances[(min(distances_list))] not in room_objects_list:
+			if len(distances_list) > 0 and distances[(min(distances_list))] not in room_objects_list:
 				room_objects_list.append(distances[(min(distances_list))])
-
-		print(room_objects_list)
 
 		for key, line in self.lines.items():
 			if key in room_objects_list:

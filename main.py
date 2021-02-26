@@ -25,5 +25,5 @@ else:
 bp.count_objects()
 bp.find_refferences()
 # bp.vizualize_lines()
-bp.find_room("object_3629")
+bp.find_room("object_49477")
 # bp.ping_radius([0,0], 5, 360)
