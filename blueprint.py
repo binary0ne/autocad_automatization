@@ -191,7 +191,7 @@ class Blueprint:
 			room_elements["number"] = room_name
 			self.rooms.append(room_elements)
 			n += 1
-			percent = var(n / len(room_labels) * 100)
+			percent = int(n / len(room_labels) * 100)
 			print(str(percent) + "%")
 
 
