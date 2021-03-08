@@ -5,3 +5,4 @@ class Settings:
 		self.temp_file = "temp.json"
 		self.output_file = "output.json"
 		self.lines_file = "lines.json"
+		self.rooms_file = "rooms.json"

@@ -22,8 +22,16 @@ if tools.check_file(settings.lines_file) == False:
 else:
 	bp.lines = tools.load(settings.lines_file)
 
-bp.count_objects()
-bp.find_refferences()
+# bp.count_objects()
+# bp.find_refferences()
 # bp.vizualize_lines()
-bp.find_room("object_49477")
+# bp.find_room("object_1391")
 # bp.ping_radius([0,0], 5, 360)
+# bp.find_rooms()
+
+#Check and create rooms file if not exist
+if tools.check_file(settings.rooms_file) == False:
+ 	bp.find_rooms()
+ 	tools.dump(bp.rooms, settings.rooms_file)
+else:
+ 	bp.rooms = tools.load(settings.rooms_file)
