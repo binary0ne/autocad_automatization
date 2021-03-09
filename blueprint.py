@@ -64,13 +64,13 @@ class Blueprint:
 		x1 = xy_coords[0]
 		y1 = xy_coords[1]
 		angle = 0
-		increment = 360 / lines
+		increment = 360 / lines		
 		while angle < 360:
-			x2 = x1 + lenght * math.cos(angle)
-			y2 = y1 + lenght * math.sin(angle)
+			x2 = x1 + lenght * math.sin(math.radians(angle))
+			y2 = y1 + lenght * math.cos(math.radians(angle))
 			angle += increment
 			ping_lines.append([x2, y2])
-#			plt.plot([x1, x2], [y1, y2])
+		#	plt.plot([x1, x2], [y1, y2])
 
 		# Intersection snippet from 
 		# https://stackoverflow.com/
@@ -98,7 +98,7 @@ class Blueprint:
 		array = self.objects[object_name]
 		x = float(array['Положение X'])
 		y = float(array['Положение Y'])
-		intersections = self.ping_radius([x,y], float(25000), 180)
+		intersections = self.ping_radius([x,y], int(5000), 16)
 		
 		# Find objects by intersections with lines builded from point of
 		# position of a room label
@@ -128,6 +128,7 @@ class Blueprint:
 			new_objects = False
 			for wall_a in room_objects_list:
 				local_intersections = 0
+				outer_intersections = 0
 				wall_a_params = self.lines[wall_a]
 				l1 = LineString([(wall_a_params["start"]), (wall_a_params["end"])])
 				for wall_b in room_objects_list:
@@ -144,8 +145,15 @@ class Blueprint:
 
 				if local_intersections == 1:
 					for parameter in [wall_a_params["start"], wall_a_params["end"]]:
+
 						if parameter not in int_points:
-							int_points.append(parameter)
+							for outer_wall in self.lines.values():
+								l2 = LineString([(outer_wall["start"]), (outer_wall["end"])])
+								int_pt = l1.intersection(l2)
+								if len(int_pt.coords) > 0:
+									outer_intersections += 1
+							if outer_intersections <= 2:
+								int_points.append(parameter)
 
 					for x1, y1 in int_points:
 						compare_point = [x1, y1]
@@ -164,7 +172,7 @@ class Blueprint:
 		#		if [x1, y1] != [x2, y2]:
 		#			plt.plot([x1, x2], [y1, y2])
 
-		# for key, line in self.lines.items():
+		#for key, line in self.lines.items():
 		#	if key in room_objects_list:
 		#		line_x = (line["start"][0], line["end"][0])
 		#		line_y = (line["start"][1], line["end"][1])
@@ -172,8 +180,8 @@ class Blueprint:
 		#		# ymean = sum(i for i in line_y) / float(len(line_y))
 		#		plt.plot(line_x, line_y)
 				# plt.annotate(key, xy=(xmean,ymean), xycoords="data")
-		# print(array)
-		# plt.show()
+		#print(array)
+		#plt.show()
 
 	def find_rooms(self):
 		"""Method to find and list all rooms"""
@@ -193,8 +201,23 @@ class Blueprint:
 			n += 1
 			percent = int(n / len(room_labels) * 100)
 			print(str(percent) + "%")
+			
+	def vizualize_room(self, room_number):
+		"""Simple room plotting"""
+		for room in self.rooms:
+			if room["number"] == room_number:
+				for key, line in self.lines.items():
+					if key in room["walls"]:
+						line_x = (line["start"][0], line["end"][0])
+						line_y = (line["start"][1], line["end"][1])
+				#		# xmean = sum(i for i in line_x) / float(len(line_x))
+				#		# ymean = sum(i for i in line_y) / float(len(line_y))
+						plt.plot(line_x, line_y)
+						# plt.annotate(key, xy=(xmean,ymean), xycoords="data")
+				print(room["corners"])
+				#print(array)
 
-
+		plt.show()
 
 
 

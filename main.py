@@ -29,9 +29,11 @@ else:
 # bp.ping_radius([0,0], 5, 360)
 # bp.find_rooms()
 
-#Check and create rooms file if not exist
+# Check and create rooms file if not exist
 if tools.check_file(settings.rooms_file) == False:
  	bp.find_rooms()
  	tools.dump(bp.rooms, settings.rooms_file)
 else:
  	bp.rooms = tools.load(settings.rooms_file)
+
+bp.vizualize_room("142")
